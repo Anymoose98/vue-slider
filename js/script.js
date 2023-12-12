@@ -1,12 +1,9 @@
-import { createApp } from 'vue'
+const { createApp } = Vue
 
 createApp({
   data() {
     return {
-      prova: "prova prova"
+        prova: "prova prova"
     }
-  },
-  methods: {
-    
-  },
+  }
 }).mount('#app')
