@@ -56,11 +56,10 @@ createApp({
 
     // scorrimento automatico
     scorrimentoAutomatico(){
-        console.log("funziona")
         clearInterval(this.autoscroll)
         this.autoscroll = setInterval(() => {
             this.contatore += +1
-            if(this.contatore === this.images.length){
+            if(this.contatore == this.images.length){
                 this.contatore = 0
             }
         }, 1000);
@@ -74,8 +73,20 @@ createApp({
     azzeraScorrimento(){
         clearInterval(this.autoscroll)
         this.contatore = 0
-    }
-  },
+    },
+
+    inverti(){
+        clearInterval(this.autoscroll)
+        this.autoscroll = setInterval(() => {
+            this.contatore += -1
+
+            if(this.contatore < 0){
+                this.contatore = this.images.length -1
+            }
+        }, 1000)
+    },
+  }
+
 
     
 
