@@ -30,6 +30,7 @@ createApp({
     }
   },
   methods: {
+    // pulsanti
     next(){
         if(this.contatore === this.images.length - 1){
             this.contatore = 0
@@ -46,6 +47,13 @@ createApp({
         else{
             this.contatore += -1
         }
+    },
+
+    // Click per cambiare immagine
+    clicktochange(index){
+        this.contatore = index
     }
   },
+
+
 }).mount('#app')

@@ -48,7 +48,7 @@
                     <div :class="contatore == 4 ? 'thumb active' : 'thumb'" >
                         <img src="img/05.webp" alt="Avengers" />
                     </div> -->
-                    <div v-for="(image, index) in images" :key="index" class="thumb" :class="contatore == index ? 'thumb active' : ''">
+                    <div v-for="(image, index) in images" :key="index" class="thumb" :class="contatore == index ? 'thumb active' : '' "@click="clicktochange(index)">
                         <img :src="image.image" :alt="image.title" />
                     </div>
                 </div>
