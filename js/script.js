@@ -52,8 +52,32 @@ createApp({
     // Click per cambiare immagine
     clicktochange(index){
         this.contatore = index
+    },
+
+    // scorrimento automatico
+    scorrimentoAutomatico(){
+        console.log("funziona")
+        clearInterval(this.autoscroll)
+        this.autoscroll = setInterval(() => {
+            this.contatore += +1
+            if(this.contatore === this.images.length){
+                this.contatore = 0
+            }
+        }, 1000);
+        },
+    // fermo scorrimento
+    fermoScorrimento(){
+        clearInterval(this.autoscroll)
+
+    },
+
+    azzeraScorrimento(){
+        clearInterval(this.autoscroll)
+        this.contatore = 0
     }
   },
+
+    
 
 
 }).mount('#app')
