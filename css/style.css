@@ -160,3 +160,6 @@ oppure i caratteri ∧ (&and;) e ∨ (&or;)
     border: 1px solid black;
     
 }
+.row{
+    width: 100%;
+}
